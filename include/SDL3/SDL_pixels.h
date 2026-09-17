@@ -1274,6 +1274,9 @@ extern SDL_DECLSPEC SDL_Palette * SDLCALL SDL_CreatePalette(int ncolors);
 /**
  * Set a range of colors in a palette.
  *
+ * If `ncolors` is larger than the palette's size - `firstcolor`,
+ * it is truncated to the amount that will fit.
+ *
  * \param palette the SDL_Palette structure to modify.
  * \param colors an array of SDL_Color structures to copy into the palette.
  * \param firstcolor the index of the first palette entry to modify.
